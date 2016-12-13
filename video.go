@@ -94,6 +94,9 @@ type Video struct {
 	//   Indicates if the impression must be linear, nonlinear, etc. If
 	//   none specified, assume all are allowed. Refer to List 5.7.
 	Linearity int8 `json:"linearity,omitempty"`
+	Skip      int8 `json:"skip,omitempty"`
+	Skipmin   int8 `json:"skipmin,omitempty"`
+	Skipafter int8 `json:"skipafter,omitempty"`
 
 	// Attribute:
 	//   sequence

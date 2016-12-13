@@ -39,6 +39,8 @@ type Imp struct {
 	//   offered as a video ad opportunity.
 	Video *Video `json:"video,omitempty"`
 
+	Audio *Audio `json:"audio,omitempty"`
+
 	// Attribute:
 	//   native
 	// Type:
@@ -57,7 +59,8 @@ type Imp struct {
 	//   responsible for rendering ad (typically video or mobile). Used
 	//   by some ad servers to customize ad code by partner.
 	//   Recommended for video and/or apps.
-	DisplayManager string `json:"displaymanager,omitempty"`
+	DisplayManager    string `json:"displaymanager,omitempty"`
+	DisplayManagerVer string `json:"displaymanagerver,omitempty"`
 
 	// Attribute:
 	//   instl
@@ -122,11 +125,13 @@ type Imp struct {
 	//   A Pmp object (Section 3.2.17) containing any private marketplace deals in effect for this impression.
 	PMP *PMP `json:"pmp,omitempty"`
 
+	Exp int64 `json:"exp,omitempty"`
+
 	// Attribute:
 	//   ext
 	// Type:
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext,omitempty"`
+	Ext *ImpExt `json:"ext,omitempty"`
 }

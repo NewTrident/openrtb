@@ -33,7 +33,10 @@ type Geo struct {
 	// Description:
 	//   Source of location data; recommended when passing
 	//   lat/lon. Refer to List 5.16.
-	Type int8 `json:"type,omitempty"`
+	Type      int8 `json:"type,omitempty"`
+	Accuracy  int8 `json:"accuracy,omitempty"`
+	Lastfix   int8 `json:"lastfix,omitempty"`
+	Ipservice int8 `json:"ipservice,omitempty"`
 
 	// Attribute:
 	//   country

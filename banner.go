@@ -32,7 +32,8 @@ type Banner struct {
 	//   Height of the impression in pixels.
 	//   If neither hmin nor hmax are specified, this value is an exact
 	//   height requirement. Otherwise it is a preferred height.
-	H uint64 `json:"h,omitempty"`
+	H      uint64   `json:"h,omitempty"`
+	Format []Format `json:"format,omitempty"`
 
 	// Attribute:
 	//   wmax

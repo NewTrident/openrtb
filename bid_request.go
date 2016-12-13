@@ -134,6 +134,7 @@ type BidRequest struct {
 	// Description:
 	//   Block list of advertisers by their domains (e.g., “ford.com”).
 	BAdv []string `json:"badv,omitempty"`
+	BApp []string `json:"bapp,omitempty"`
 
 	// Attribute:
 	//   regs
@@ -150,5 +151,5 @@ type BidRequest struct {
 	//   object
 	// Description:
 	//   Placeholder for exchange-specific extensions to OpenRTB.
-	Ext Ext `json:"ext,omitempty"`
+	Ext *SmaatoExt `json:"ext,omitempty"`
 }
